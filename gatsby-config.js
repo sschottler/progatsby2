@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Level Up Blog`,
     description: `A new blog!`,
+    siteUrl: 'https://clever-joliot-9f7771.netlify.com',
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Level Up Blog`,
+        short_name: `LUTBlog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#524763`,
+        theme_color: `#524763`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -39,6 +41,8 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-netlify-cms',
+    // make sure this is at the end of the plugins!
     'gatsby-plugin-netlify',
   ],
 }
